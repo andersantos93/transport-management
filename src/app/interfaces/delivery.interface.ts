@@ -30,3 +30,14 @@ export interface DeliveryProgressInterface {
   entregues: number;
   pendentes: number;
 }
+
+export interface FailureDeliveryInterface {
+  motorista: string;
+  quantidade: number;
+}
+
+export interface NeighborhoodDeliveryInterface {
+  neighbor: string;
+  total_entregas: number;
+  realizados: number;
+}
