@@ -1,15 +1,16 @@
-import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 
 import { DeliveryService } from '../../services/delivery.service';
 import { DeliveryListInterface } from '../../interfaces/delivery.interface';
 import { CommonModule } from '@angular/common';
+import { MatInputModule } from '@angular/material/input';
 
 @Component({
   selector: 'app-delivery-list',
   standalone: true,
-  imports: [CommonModule, MatTableModule, MatPaginatorModule],
+  imports: [CommonModule, MatTableModule, MatPaginatorModule, MatInputModule],
   templateUrl: './delivery-list.component.html',
   styleUrl: './delivery-list.component.scss',
 })
@@ -35,5 +36,10 @@ export class DeliveryListComponent implements OnInit {
       this.dataSource = new MatTableDataSource(this.deliveryList);
       this.dataSource.paginator = this.paginator;
     });
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 }
