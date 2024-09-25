@@ -1,0 +1,19 @@
+<table mat-table [dataSource]="deliveriesProgress">
+  <ng-container matColumnDef="motorista">
+    <th mat-header-cell *matHeaderCellDef>Motorista</th>
+    <td mat-cell *matCellDef="let element">{{ element.motorista }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="qtd_pendentes">
+    <th mat-header-cell *matHeaderCellDef>Quantidade de entregas pendentes</th>
+    <td mat-cell *matCellDef="let element">{{ element.pendentes }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="qtd_entregas">
+    <th mat-header-cell *matHeaderCellDef>Quantidade de entregas efetuadas</th>
+    <td mat-cell *matCellDef="let element">{{ element.entregues }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
