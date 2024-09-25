@@ -6,11 +6,18 @@ import { DeliveryService } from '../../services/delivery.service';
 import { DeliveryListInterface } from '../../interfaces/delivery.interface';
 import { CommonModule } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-delivery-list',
   standalone: true,
-  imports: [CommonModule, MatTableModule, MatPaginatorModule, MatInputModule],
+  imports: [
+    CommonModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatInputModule,
+    MatToolbarModule,
+  ],
   templateUrl: './delivery-list.component.html',
   styleUrl: './delivery-list.component.scss',
 })

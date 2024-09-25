@@ -11,6 +11,7 @@ export const routes: Routes = [
   },
   {
     path: 'list',
+    title: 'Lista de entregas',
     component: DeliveryListComponent,
   },
 ];

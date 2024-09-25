@@ -1,1 +1,7 @@
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="navigate('')">Dashboard</button>
+  <button mat-menu-item (click)="navigate('list')">Lista de entregas</button>
+</mat-menu>
+
 <router-outlet />
