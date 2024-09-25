@@ -41,3 +41,10 @@ export interface DistrictDeliveryInterface {
   total_entregas: number;
   realizados: number;
 }
+
+export interface DeliveryListInterface {
+  motorista: string;
+  origem: string;
+  destino: string;
+  status: string;
+}
