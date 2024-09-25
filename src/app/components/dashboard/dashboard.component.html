@@ -1,4 +1,7 @@
 <div *ngIf="deliveries$ | async as deliveries">
+  <mat-toolbar>
+    <span>Dashboard</span>
+  </mat-toolbar>
   <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
     <mat-tab label="Andamento de entregas por motorista">
       <app-delivery-progress [deliveries]="deliveries"></app-delivery-progress>
