@@ -36,8 +36,8 @@ export interface FailureDeliveryInterface {
   quantidade: number;
 }
 
-export interface NeighborhoodDeliveryInterface {
-  neighbor: string;
+export interface DistrictDeliveryInterface {
+  bairro: string;
   total_entregas: number;
   realizados: number;
 }
