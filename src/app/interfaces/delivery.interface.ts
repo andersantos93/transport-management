@@ -38,8 +38,8 @@ export interface FailureDeliveryInterface {
 
 export interface DistrictDeliveryInterface {
   bairro: string;
-  total_entregas: number;
-  realizados: number;
+  entregues: number;
+  total: number;
 }
 
 export interface DeliveryListInterface {

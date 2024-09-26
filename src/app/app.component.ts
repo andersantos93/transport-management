@@ -10,8 +10,6 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'lyncas-transport-management';
-
   constructor(private readonly router: Router) {}
 
   navigate(page: string) {
